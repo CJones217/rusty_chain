@@ -1,0 +1,1 @@
+type BlockHash = Vec<u8>;
