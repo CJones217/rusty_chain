@@ -1,4 +1,4 @@
-use Super::*; //imports lib.rs
+use crate::BlockHash;
 
 pub struct Block{
     pub index: u32, //where in the blockchain the block is at
