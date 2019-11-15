@@ -9,9 +9,9 @@ pub struct Block{
     pub nonce: u32, // this is for the proof of work when mining or doing transactions
 
 }
-impl fmt::Debug for Block{
+impl fmt::Debug for Block{ //needs to be before impl Block. not sure why TODO look into this
     fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result{
-    write!(f,"block")
+    write!(f,"Index: {}", self.index)
     }
 
 }
