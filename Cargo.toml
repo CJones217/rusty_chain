@@ -9,3 +9,4 @@ edition = "2018"
 name= "rustychainlib"
 psth= "src/lib.rs"
 [dependencies]
+hex = "0.4.0"
