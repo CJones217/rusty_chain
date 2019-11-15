@@ -11,8 +11,8 @@ pub struct Block{
 }
 impl fmt::Debug for Block{ //needs to be before impl Block. not sure why TODO look into this
     fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result{
-    write!(f,"Block ~ Index: {} ~ time created: {}", self.index, self.timeStamp)
-    }
+    write!(f,"Block ~ Index: {} ~ time created: {} ~ hash: {} ~ last blocks hash: {} ~ nonce (POW): {}", self.index, self.timeStamp, self.hash, self.lastBlockHash, self.nonce)
+    } //TODO implement it so it can read the hex of the hashes
 
 }
 
