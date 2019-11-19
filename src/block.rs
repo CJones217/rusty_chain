@@ -9,8 +9,8 @@ pub struct Block{
     pub timeStamp: u128 , //time block is created
     pub hash: BlockHash, //hash for the block
     pub lastBlockHash: BlockHash, //hash of the previous block in blockchain
-    pub nonce: u32, // this is for the proof of work when mining or doing transactions
-    pub payload: String,
+    pub nonce: u32, // this is for the proof of work when mining or doing transactions. Does not do anything right now
+    pub payload: String,// payload is what is inside a block, so normally it is a transaction between two wallets or between the miner and the network
 
 }
 impl fmt::Debug for Block{ //needs to be before impl Block. not sure why TODO look into this
@@ -32,7 +32,7 @@ impl Block{
             payload,
         }
     }
-    pub fn bytes(&self) -> Vec<u8>{
+    pub fn bytes(&self) -> Vec<u8>{ // take the bytes from everything in the block and put it together so it can be hashed
         let mut b = vec![];
         b.extend(&u32_bits_to_4bytes(&self.index));
         b.extend(&u128_bits_to_16bytes(&self.timeStamp));
