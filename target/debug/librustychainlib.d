@@ -1,1 +1,0 @@
-/Users/collinjones/Documents/programs/rust/rusty_chain/target/debug/librustychainlib.rlib: /Users/collinjones/Documents/programs/rust/rusty_chain/src/block.rs /Users/collinjones/Documents/programs/rust/rusty_chain/src/lib.rs
