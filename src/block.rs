@@ -1,4 +1,5 @@
 use crate::BlockHash;
+use crypto_hash::*;
 use std::fmt;
 use hex::*;
 
@@ -28,7 +29,11 @@ impl Block{
             nonce
         }
     }
+    pub fn bytes(&self) -> Vec<u8>{
 
-
+    }
+    pub fn hash(&self) -> Vec<u8> {
+        Vec::from(hex_digest(Algorithm::SHA256, &self.bytes()))
+    }
 
 }
