@@ -41,7 +41,7 @@ impl Block{
         b.extend(self.payload.as_bytes());
         b
     }
-    pub fn hash(&self) -> Vec<u8> {
+    pub fn hashable(&self) -> Vec<u8> {
         digest(SHA256,&self.bytes())
     }
 
