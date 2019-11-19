@@ -1,6 +1,13 @@
 type BlockHash = Vec<u8>;
+use std::time::*;
 
 
+
+
+pub fn now () -> u128 {
+    let duration = SystemTime::now().duration_since(UNIX_EPOCH).unwrap();
+    duration.as_secs() as u128 * 1000 + duration.subsec_millis() as u128
+}
 //u8 is equal to hexadecimal
 pub fn u32_bits_to_4bytes (u: &u32) -> [u8; 4] { //8 bits per byte 32 bits/8 is 4 bytes
     [
