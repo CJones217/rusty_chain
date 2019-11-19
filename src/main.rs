@@ -6,5 +6,7 @@ fn main() {
     println!("{:?}",&block);
     let block_hash = block.hashable();
     println!("{:?}", &block_hash);
+    let block2 = Block::new(1,now(),block_hash,3,"second block".to_owned());
+    println!("{:?}",&block2);
 }
 //

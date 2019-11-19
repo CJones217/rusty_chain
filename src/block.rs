@@ -15,8 +15,8 @@ pub struct Block{
 }
 impl fmt::Debug for Block{ //needs to be before impl Block. not sure why TODO look into this
     fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result{
-    write!(f,"Block ~ Index: {} ~ time created: {} ~ hash: {} ~ last blocks hash: {} ~ nonce (POW): {} ~ payload: {}",
-           &self.index, &self.timeStamp, &hex::encode(&self.hash), &hex::encode(&self.lastBlockHash), &self.nonce, &self.payload)
+    write!(f,"Block ~ Index: {} ~ time created: {} ~ last blocks hash: {} ~ nonce (POW): {} ~ payload: {}",
+           &self.index, &self.timeStamp, &hex::encode(&self.lastBlockHash), &self.nonce, &self.payload)
     }
 
 }
@@ -42,7 +42,7 @@ impl Block{
         b
     }
     pub fn hashable(&self) -> Vec<u8> {
-        digest(SHA256,&self.bytes())
+        digest(SHA256, &self.bytes())
     }
 
 }
