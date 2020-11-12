@@ -1,1 +1,0 @@
-/home/blooopers/programming/rustychain/target/debug/rusty_chain: /home/blooopers/programming/rustychain/src/block.rs /home/blooopers/programming/rustychain/src/lib.rs /home/blooopers/programming/rustychain/src/main.rs
